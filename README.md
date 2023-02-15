@@ -36,15 +36,15 @@ As a junior developer, I am open to learning from others and welcome any advice 
 To view the project, you can open the files in an editor such as VS Code and use the Live Server extension to view the site. Alternatively, you can download the files and open the index.html file in your web browser. Or you can clone this repository:
 
 
-![Step 1: Clone the repository to your local machine](https://github.com/ChrisR08/Task-42-44__finalCapstone/blob/master/images/step-1.png)
+![Step 1: Clone the repository to your local machine](https://github.com/ChrisR08/Task-42-44__finalCapstone/blob/main/Korean-Kitchen-HTML-CSS-JS/images/step-1.png)
 
 2. Open the project folder in your code editor of choice. I recommend using Visual Studio Code.
 
-![Step 2: Open the project folder in your code editor of choice](https://github.com/ChrisR08/Task-42-44__finalCapstone/blob/master/images/step-2.png)
+![Step 2: Open the project folder in your code editor of choice](https://github.com/ChrisR08/Task-42-44__finalCapstone/blob/main/Korean-Kitchen-HTML-CSS-JS/images/step-2.png)
 
 3. Install the Live Server extension in Visual Studio Code, and then launch the project using Live Server.
 
-![Step 3: Install the Live Server extension in Visual Studio Code and launch the project](https://github.com/ChrisR08/Task-42-44__finalCapstone/blob/master/images/step-3.png)
+![Step 3: Install the Live Server extension in Visual Studio Code and launch the project](https://github.com/ChrisR08/Task-42-44__finalCapstone/blob/main/Korean-Kitchen-HTML-CSS-JS/images/step-3.png)
 
 That's it... You should now be able to view the project in your web browse!
 
