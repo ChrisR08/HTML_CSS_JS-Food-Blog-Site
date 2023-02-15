@@ -60,6 +60,6 @@ To view the project, you can open the files in an editor such as VS Code and use
 
 
 
-That's it... You should now be able to view the project in your web browse!
+That's it... You should now be able to view the project in your web browser!
 
 
