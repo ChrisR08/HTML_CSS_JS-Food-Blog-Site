@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/contact-us.css" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../images/icons-logos/kk-favicon.png"
+        />
+        <script type="text/javascript" src="./js/index.js" defer></script>
+        <script type="text/javascript" src="./js/contactForm.js" defer></script>
+
+        <title>Korean Kitchen - Contact Us</title>
+    </head>
+
+    <body class="recipe-page-body">
+        <a class="skip-to-content" href="#main">Skip to content</a>
+
+        <!-- Top level header with nested logo & main-nav -->
+        <header id="header__main" class="header flex center-xy">
+            <div class="header__wrapper site-container flex">
+                <a class="header__logo" href="index.html">
+                    <p class="header__logo fs-500 clr-dark ff-serif">
+                        <span class="text-red">K</span>orean
+                        <span class="text-blue">K</span>itchen
+                    </p>
+                </a>
+
+                <button
+                    id="mob-menu-btn"
+                    class="mobile-nav-toggle"
+                    aria-controls="primary-navigation"
+                    aria-label="Open menu button"
+                ></button>
+
+                <!-- Main Nav element -->
+                <div
+                    id="primary-nav-wrapper"
+                    data-menu-open="false"
+                    class="nav-wrapper"
+                >
+                    <nav class="header__main-nav flex center-xy">
+                        <ul
+                            id="primary-navigation"
+                            class="header__main-nav-ul flex flex-col"
+                        >
+                            <li class="nav-link">
+                                <a href="index.html#recipes">Recipes</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="index.html#categories"
+                                    >Categories</a
+                                >
+                            </li>
+                            <li class="nav-link">
+                                <a href="my-account.html">My Account</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Start of the Main content -->
+        <main id="main" class="site-container flex center-xy">
+
+                <!-- Contact Section -->
+                <section id="contact-us" class="contact-section flex flex-col center-xy border-radius-s even-spacing-xl">
+                   <h1 class="h1 center-text fs-700 text-dark">
+                        Contact Us
+                    </h1>
+                    <!-- Contact Form-->
+                    <div id="contact-wrapper" class="contact-container even-spacing-m">
+                        <p>Enter you details below and we will get back to you ASAP!</p>
+                        <form id="contact-form" class="even-spacing-s">
+                            <div>
+                                <label for="name">Name:</label><br />
+                                <input
+                                    id="name"
+                                    class="border-radius-s"
+                                    type="text"
+                                    name="name"
+                                />
+                            </div>
+                            <div>
+                                <label for="email">Email:</label><br>
+                                <input type="email" id="email" name="email"><br>
+                            </div>
+                            <div>
+                                <label for="message">Message:</label><br />
+                                <textarea
+                                    id="message"
+                                    class="border-radius-s"
+                                    name="message"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            <input
+                                id="submit"
+                                class="submit-btn border-radius-s"
+                                type="submit"
+                                value="Submit"
+                            />
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="footer bg-dark">
+            <div class="footer__content-wrapper flex flex-col">
+                <ul class="grid grid-instagram">
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/rice-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/rice-cat.webp"
+                                alt="A bowl of Korean rice and pork"
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/noodles-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/noodles-cat.webp"
+                                alt="A bowl of Korean noodles."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/korean-bbq-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/korean-bbq-cat.webp"
+                                alt="Chopsticks holding meat over a Korean BBQ."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/soup-broth-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/soup-broth-cat.webp"
+                                alt="A bowl of Korean kimchi soup"
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/side-dishes-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/side-dishes-cat.webp"
+                                alt="A selection of Korean side-dishes."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/kimbap-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/kimbap-cat.webp"
+                                alt="A selection of Korean snacks."
+                            />
+                        </picture>
+                    </li>
+                    <li class="insta-follow-btn-wrapper">
+                        <div class="insta-follow-btn flex center-xy">
+                            <a
+                                href="#."
+                                class="insta-follow-btn__link center-text clickable-parent text-dark"
+                                >Follow us on Instagram</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="footer__content site-container even-spacing-m">
+                    <div class="footer__link-wrapper flex flex-row center-xy">
+                        <a
+                            class="footer__link text-white"
+                            href="../contact-us.html"
+                            >Contact Us</a
+                        >
+                        <a class="footer__link text-white" href="#."
+                            >Collaborate</a
+                        >
+
+                        <a class="footer__link text-white" href="#.">Privacy</a>
+                    </div>
+                    <div class="flex flex-col center-xy even-spacing-xs">
+                        <p class="text-white">
+                            Designed & built by
+                            <a class="dev__link text-white" href="#."
+                                >ChrisR.dev</a
+                            >
+                        </p>
+                        <p class="footer__paragraph text-white">
+                            Korean Kitchen &copyCopyright 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

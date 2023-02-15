@@ -1,0 +1,126 @@
+/* Styles for the recipe pages */
+
+/* Hero Section ============================================================ */
+.recipe-hero__title-container {
+    padding: 5rem 0;
+}
+
+.save-share-wrapper {
+    width: 100%;
+    max-width: 300px;
+    justify-content: space-between;
+}
+
+.img-container-recipe-hero {
+    height: 60vh;
+}
+
+/* Recipe Section ============================================================ */
+.recipe-section {
+    border-bottom: 1px solid var(--clr-dark);
+}
+
+.recipe-intro > .save-share-wrapper {
+    max-width: 175px;
+}
+
+.recipe-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 1rem;
+    stroke: var(--clr-dark);
+}
+
+.ingredients-ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.ingredients-ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+/* Comments Section ======================================================== */
+.comments-wrapper {
+    border: 2px solid var(--clr-off-white);
+    padding: 2rem;
+}
+
+.comments__date {
+    font-size: 1.25rem;
+}
+
+input {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--clr-off-white);
+}
+
+label {
+    margin-top: 4rem;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--clr-off-white);
+}
+
+.submit-btn {
+    padding: 0.75rem 3rem;
+    background-color: var(--clr-off-white);
+    border: 0.5px solid var(--clr-dark);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: var(--clr-dark);
+    color: white;
+}
+
+/* You may also like Section =============================================== */
+.grid-you-may-also {
+    max-width: 100%;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-gap: var(--gap-l);
+}
+
+/*
+
+
+
+
+*/
+/* Media Queeries ========================================================== */
+@media (max-width: 1024px) {
+    .comments-section {
+        border-bottom: 1px solid var(--clr-dark);
+    }
+}
+
+@media (min-width: 1025px) {
+    .recipe-page-body {
+        background-color: var(--clr-off-white);
+        border-top: 8.5rem solid var(--clr-off-white);
+    }
+
+    /* Recipe Section */
+    .content {
+        max-width: 70%;
+        margin: 8rem auto;
+        padding: 0 6rem;
+        background-color: white;
+    }
+
+    /* You may also like Section */
+    .you-may-also-like {
+        padding: 6rem 3rem;
+    }
+
+    .grid-you-may-also {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

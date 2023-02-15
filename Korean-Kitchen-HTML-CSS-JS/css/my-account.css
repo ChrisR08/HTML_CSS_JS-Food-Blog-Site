@@ -1,0 +1,10 @@
+/* My Account Section ============================================================ */
+.account-section {
+    width: 100%;
+    max-width: 80rem;
+    padding: 6rem 0;
+}
+
+.account-container {
+    justify-content: flex-start;
+}

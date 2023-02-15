@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/icons-logos/kk-favicon.png"
+        />
+        <script type="text/javascript" src="js/index.js" defer></script>
+
+        <title>Korean Kitchen - Home</title>
+    </head>
+
+    <body>
+        <a class="skip-to-content" href="#main">Skip to content</a>
+
+        <!-- Top level header with nested logo & main-nav -->
+        <header id="header__main" class="header flex center-xy">
+            <div class="header__wrapper site-container flex">
+                <a class="header__logo" href="index.html">
+                    <p class="header__logo fs-500 clr-dark ff-serif">
+                        <span class="text-red">K</span>orean
+                        <span class="text-blue">K</span>itchen
+                    </p>
+                </a>
+
+                <button
+                    id="mob-menu-btn"
+                    class="mobile-nav-toggle"
+                    aria-controls="primary-navigation"
+                    aria-label="Open menu button"
+                ></button>
+
+                <!-- Main Nav element -->
+                <div
+                    id="primary-nav-wrapper"
+                    data-menu-open="false"
+                    class="nav-wrapper"
+                >
+                    <nav class="header__main-nav flex center-xy">
+                        <ul
+                            id="primary-navigation"
+                            class="header__main-nav-ul flex flex-col"
+                        >
+                            <li class="nav-link">
+                                <a href="#recipes">Recipes</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#categories">Categories</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="my-account.html">My Account</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Start of the Main content -->
+        <main id="main">
+            <!-- Hero Section -->
+            <header id="home-hero" class="hero__grid">
+                <picture class="img-container">
+                    <source srcset="images/korean-food-home-hero.jpeg" />
+                    <img
+                        class="hero__img cover-img"
+                        loading="eager"
+                        src="images/korean-food-home-hero.webp"
+                        alt="A bowl of Korean food and side dishes"
+                    />
+                </picture>
+
+                <div
+                    class="hero__content-container flex flex-col even-spacing-m"
+                >
+                    <h1 class="h1 hero__h1 fs-700 text-white">
+                        Discover Delicious Korean Cuisine
+                    </h1>
+                    <p class="hero__lede text-white">
+                        Explore rich and diverse flavors with our collection of
+                        authentic recipes and cultural insights.
+                    </p>
+                </div>
+
+                <aside class="img-overlay"></aside>
+            </header>
+            <!-- Categories Section -->
+            <section id="categories" class="section section-cat">
+                <div class="site-container">
+                    <h2 class="h2 center-text">Categories</h2>
+                    <div class="grid section-cat__grid">
+                        <div class="section-cat__grid-child">
+                            <picture
+                                class="section-cat__img-container cover-img-container"
+                            >
+                                <source srcset="./images/noodles-cat.jpg" />
+                                <img
+                                    class="section-cat__img cat-img-1 cover-img"
+                                    loading="lazy"
+                                    src="./images/noodles-cat.webp"
+                                    alt="A bowl of Korean noodles."
+                                />
+                            </picture>
+                            <a
+                                href="#"
+                                class="section-cat__title clickable-parent"
+                                >Noodles</a
+                            >
+                        </div>
+                        <div class="section-cat__grid-child">
+                            <picture
+                                class="section-cat__img-container cover-img-container"
+                            >
+                                <source srcset="./images/rice-cat.jpg" />
+                                <img
+                                    class="section-cat__img cat-img-2 cover-img"
+                                    loading="lazy"
+                                    src="./images/rice-cat.webp"
+                                    alt="A bowl of Korean rice and pork"
+                                />
+                            </picture>
+                            <a
+                                href="#"
+                                class="section-cat__title clickable-parent"
+                                >Rice Dishes</a
+                            >
+                        </div>
+                        <div class="section-cat__grid-child">
+                            <picture
+                                class="section-cat__img-container cover-img-container"
+                            >
+                                <source srcset="./images/soup-broth-cat.jpg" />
+                                <img
+                                    class="section-cat__img cat-img-3 cover-img"
+                                    loading="lazy"
+                                    src="./images/soup-broth-cat.webp"
+                                    alt="A bowl of Korean kimchi soup"
+                                />
+                            </picture>
+                            <a
+                                href="#"
+                                class="section-cat__title clickable-parent"
+                                >Soup & Broths</a
+                            >
+                        </div>
+                        <div class="section-cat__grid-child">
+                            <picture
+                                class="section-cat__img-container cover-img-container"
+                            >
+                                <source srcset="./images/korean-bbq-cat.jpg" />
+                                <img
+                                    class="section-cat__img cover-img"
+                                    loading="lazy"
+                                    src="./images/korean-bbq-cat.webp"
+                                    alt="Chopsticks holding meat over a Korean BBQ."
+                                />
+                            </picture>
+                            <a
+                                href="#"
+                                class="section-cat__title clickable-parent"
+                                >Meat & BBQ</a
+                            >
+                        </div>
+                        <div class="section-cat__grid-child">
+                            <picture
+                                class="section-cat__img-container cover-img-container"
+                            >
+                                <source srcset="./images/side-dishes-cat.jpg" />
+                                <img
+                                    class="section-cat__img cover-img"
+                                    loading="lazy"
+                                    src="./images/side-dishes-cat.webp"
+                                    alt="A selection of Korean side-dishes."
+                                />
+                            </picture>
+                            <a
+                                href="#"
+                                class="section-cat__title clickable-parent"
+                                >Side Dishes</a
+                            >
+                        </div>
+                        <div class="section-cat__grid-child">
+                            <picture
+                                class="section-cat__img-container cover-img-container"
+                            >
+                                <source srcset="./images/kimbap-cat.jpg" />
+                                <img
+                                    class="section-cat__img cover-img"
+                                    loading="lazy"
+                                    src="./images/kimbap-cat.webp"
+                                    alt="A selection of Korean snacks."
+                                />
+                            </picture>
+                            <a
+                                href="#"
+                                class="section-cat__title clickable-parent"
+                                >Kimbap</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid for main layout -->
+            <div class="grid-main">
+                <!-- Author Bio Section -->
+                <section class="section-bio">
+                    <div
+                        class="bio-content-wrapper flex flex-col center-xy even-spacing-l"
+                    >
+                        <h2 class="h2 center-text">About Me</h2>
+                        <picture class="section-bio__img-container">
+                            <source
+                                media="(max-width: 767px)"
+                                srcset="
+                                    ./images/Sujung-Roberts-headshot-400.webp
+                                "
+                                type="image/webp"
+                            />
+                            <source
+                                media="(min-width: 768px)"
+                                srcset="
+                                    ./images/Sujung-Roberts-headshot-800.webp
+                                "
+                                type="image/webp"
+                            />
+                            <source
+                                media="(max-width: 799px)"
+                                srcset="
+                                    ./images/Sujung-Roberts-headshot-400.jpg
+                                "
+                                type="image/jpeg"
+                            />
+                            <source
+                                media="(min-width: 800px)"
+                                srcset="
+                                    ./images/Sujung-Roberts-headshot-800.jpg
+                                "
+                                type="image/jpeg"
+                            />
+                            <img
+                                class="section-bio__img"
+                                src="./images/Sujung-Roberts-headshot-400.webp"
+                                alt="Sujung Roberts' headshot"
+                            />
+                        </picture>
+                        <div
+                            class="section-bio__content flex flex-col center-xy even-spacing-s"
+                        >
+                            <p class="h3 author fs-500 center-text">
+                                <span class="content__span uppercase fs-400"
+                                    >Written by</span
+                                >Sujung Roberts
+                            </p>
+                            <p class="content__p center-text">
+                                I love experimenting with Korean ingredients and
+                                flavours!. I am passionate about introducing the
+                                delicious variety Korean cuisine has to offer to
+                                everyone in the UK.
+                            </p>
+                            <div class="social-links flex">
+                                <a href="#."
+                                    ><svg
+                                        class="social-link"
+                                        viewBox="0 0 24 24"
+                                        width="6vw"
+                                        height="6vw"
+                                    >
+                                        <path
+                                            d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"
+                                        /></svg></a
+                                ><a href="#."
+                                    ><svg
+                                        class="social-link"
+                                        viewBox="0 0 24 24"
+                                        width="6vw"
+                                        height="6vw"
+                                    >
+                                        <path
+                                            d="M12,2C6.477,2,2,6.477,2,12c0,4.237,2.636,7.855,6.356,9.312c-0.087-0.791-0.167-2.005,0.035-2.868 c0.182-0.78,1.172-4.971,1.172-4.971s-0.299-0.599-0.299-1.484c0-1.391,0.806-2.428,1.809-2.428c0.853,0,1.265,0.641,1.265,1.408 c0,0.858-0.546,2.141-0.828,3.329c-0.236,0.996,0.499,1.807,1.481,1.807c1.777,0,3.143-1.874,3.143-4.579 c0-2.394-1.72-4.068-4.177-4.068c-2.845,0-4.515,2.134-4.515,4.34c0,0.859,0.331,1.781,0.744,2.282 c0.082,0.099,0.093,0.186,0.069,0.287c-0.076,0.316-0.244,0.995-0.277,1.134c-0.043,0.183-0.145,0.222-0.334,0.133 c-1.249-0.582-2.03-2.408-2.03-3.874c0-3.154,2.292-6.052,6.608-6.052c3.469,0,6.165,2.472,6.165,5.776 c0,3.447-2.173,6.22-5.189,6.22c-1.013,0-1.966-0.527-2.292-1.148c0,0-0.502,1.909-0.623,2.378 c-0.226,0.868-0.835,1.958-1.243,2.622C9.975,21.843,10.969,22,12,22c5.522,0,10-4.478,10-10S17.523,2,12,2z"
+                                        /></svg></a
+                                ><a href="#."
+                                    ><svg
+                                        class="social-link"
+                                        viewBox="0 0 24 24"
+                                        width="6vw"
+                                        height="6vw"
+                                    >
+                                        <path
+                                            d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recipes Section -->
+                <section id="recipes" class="section-recipes">
+                    <div class="recipes-content-wrapper even-spacing-l">
+                        <h2 class="h2">Popular Recipes</h2>
+
+                        <div class="grid grid-recipes">
+                            <div
+                                class="recipe-card flex flex-col even-spacing-m"
+                            >
+                                <div
+                                    class="recipe-card__content even-spacing-s"
+                                >
+                                    <a
+                                        class="clickable-parent"
+                                        href="recipes/bibimbap.html"
+                                        ><h3 class="h3 text-dark">
+                                            Bibimbap
+                                        </h3></a
+                                    >
+                                    <p class="recipe-card__excerpt">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Reiciendis eum, veniam
+                                        eaque quas officiis sint ut deleniti
+                                        accusamus quo consectetur sapiente.
+                                    </p>
+                                    <p class="recipe-card__read-more text-blue">
+                                        Read More
+                                    </p>
+                                </div>
+                                <picture class="recipe-card__img-container">
+                                    <source
+                                        srcset="./images/bibimbap-recipe.jpg"
+                                    />
+                                    <img
+                                        class="section-cat__img cover-img"
+                                        loading="lazy"
+                                        src="./images/bibimbap-recipe.webp"
+                                        alt="Korean rice, beef mince and vegtable dish"
+                                    />
+                                </picture>
+                            </div>
+                            <div
+                                class="recipe-card flex flex-col even-spacing-m"
+                            >
+                                <div
+                                    class="recipe-card__content even-spacing-s"
+                                >
+                                    <a
+                                        class="clickable-parent"
+                                        href="recipes/korean-fried-chicken.html"
+                                        ><h3 class="h3 text-dark">
+                                            Korean Fried Chicken
+                                        </h3></a
+                                    >
+                                    <p class="recipe-card__excerpt">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Reiciendis eum, veniam
+                                        eaque quas officiis sint ut deleniti
+                                        accusamus quo consectetur sapiente.
+                                    </p>
+                                    <p class="recipe-card__read-more text-blue">
+                                        Read More
+                                    </p>
+                                </div>
+                                <picture class="recipe-card__img-container">
+                                    <source srcset="./images/kfc-recipe.jpg" />
+                                    <img
+                                        class="section-cat__img cover-img"
+                                        loading="lazy"
+                                        src="./images/kfc-recipe.webp"
+                                        alt="Spicy Korean Fried Chicken on a plate"
+                                    />
+                                </picture>
+                            </div>
+                            <div
+                                class="recipe-card flex flex-col even-spacing-m"
+                            >
+                                <div
+                                    class="recipe-card__content even-spacing-s"
+                                >
+                                    <a
+                                        class="clickable-parent"
+                                        href="recipes/kimbap.html"
+                                        ><h3 class="h3 text-dark">Kimbap</h3></a
+                                    >
+                                    <p class="recipe-card__excerpt">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Reiciendis eum, veniam
+                                        eaque quas officiis sint ut deleniti
+                                        accusamus quo consectetur sapiente.
+                                    </p>
+                                    <p class="recipe-card__read-more text-blue">
+                                        Read More
+                                    </p>
+                                </div>
+                                <picture class="recipe-card__img-container">
+                                    <source
+                                        srcset="./images/kimbap-recipe.jpg"
+                                    />
+                                    <img
+                                        class="section-cat__img cover-img"
+                                        loading="lazy"
+                                        src="./images/kimbap-recipe.webp"
+                                        alt="A selection of Korean snacks."
+                                    />
+                                </picture>
+                            </div>
+                            <div
+                                class="recipe-card flex flex-col even-spacing-m"
+                            >
+                                <div
+                                    class="recipe-card__content even-spacing-s"
+                                >
+                                    <a
+                                        class="clickable-parent"
+                                        href="recipes/spicy-lamen.html"
+                                        ><h3 class="h3 text-dark">
+                                            Spicy Lamen
+                                        </h3></a
+                                    >
+                                    <p class="recipe-card__excerpt">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Reiciendis eum, veniam
+                                        eaque quas officiis sint ut deleniti
+                                        accusamus quo consectetur sapiente.
+                                    </p>
+                                    <p class="recipe-card__read-more text-blue">
+                                        Read More
+                                    </p>
+                                </div>
+                                <picture class="recipe-card__img-container">
+                                    <source
+                                        srcset="./images/noodle-recipe.jpg"
+                                    />
+                                    <img
+                                        class="section-cat__img cover-img"
+                                        loading="lazy"
+                                        src="./images/noodle-recipe.webp"
+                                        alt="A selection of Korean snacks."
+                                    />
+                                </picture>
+                            </div>
+                            <div
+                                class="recipe-card flex flex-col even-spacing-m"
+                            >
+                                <div
+                                    class="recipe-card__content even-spacing-s"
+                                >
+                                    <a class="clickable-parent" href="#."
+                                        ><h3 class="h3 text-dark">
+                                            Hangover Soup
+                                        </h3></a
+                                    >
+                                    <p class="recipe-card__excerpt">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Reiciendis eum, veniam
+                                        eaque quas officiis sint ut deleniti
+                                        accusamus quo consectetur sapiente.
+                                    </p>
+                                    <p class="recipe-card__read-more text-blue">
+                                        Read More
+                                    </p>
+                                </div>
+                                <picture class="recipe-card__img-container">
+                                    <source
+                                        srcset="
+                                            ./images/hangover-soup-recipe.jpg
+                                        "
+                                    />
+                                    <img
+                                        class="section-cat__img cover-img"
+                                        loading="lazy"
+                                        src="./images/hangover-soup-recipe.webp"
+                                        alt="A selection of Korean snacks."
+                                    />
+                                </picture>
+                            </div>
+                            <div
+                                class="recipe-card flex flex-col even-spacing-m"
+                            >
+                                <div
+                                    class="recipe-card__content even-spacing-s"
+                                >
+                                    <a class="clickable-parent" href="#."
+                                        ><h3 class="h3 text-dark">
+                                            Ricecakes with spicy sauce
+                                        </h3></a
+                                    >
+                                    <p class="recipe-card__excerpt">
+                                        Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Reiciendis eum, veniam
+                                        eaque quas officiis sint ut deleniti
+                                        accusamus quo consectetur sapiente.
+                                    </p>
+                                    <p class="recipe-card__read-more text-blue">
+                                        Read More
+                                    </p>
+                                </div>
+                                <picture class="recipe-card__img-container">
+                                    <source
+                                        srcset="./images/tteokbeokki-recipe.jpg"
+                                    />
+                                    <img
+                                        class="section-cat__img cover-img"
+                                        loading="lazy"
+                                        src="./images/tteokbeokki-recipe.webp"
+                                        alt="A selection of Korean snacks."
+                                    />
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="footer bg-dark">
+            <div class="footer__content-wrapper flex flex-col">
+                <ul class="grid grid-instagram">
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/rice-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/rice-cat.webp"
+                                alt="A bowl of Korean rice and pork"
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/noodles-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/noodles-cat.webp"
+                                alt="A bowl of Korean noodles."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/korean-bbq-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/korean-bbq-cat.webp"
+                                alt="Chopsticks holding meat over a Korean BBQ."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/soup-broth-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/soup-broth-cat.webp"
+                                alt="A bowl of Korean kimchi soup"
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/side-dishes-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/side-dishes-cat.webp"
+                                alt="A selection of Korean side-dishes."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="./images/kimbap-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="./images/kimbap-cat.webp"
+                                alt="A selection of Korean snacks."
+                            />
+                        </picture>
+                    </li>
+                    <li class="insta-follow-btn-wrapper">
+                        <div class="insta-follow-btn flex center-xy">
+                            <a
+                                href="#."
+                                class="insta-follow-btn__link center-text clickable-parent text-dark"
+                                >Follow us on Instagram</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="footer__content site-container even-spacing-m">
+                    <div class="footer__link-wrapper flex flex-row center-xy">
+                        <a
+                            class="footer__link text-white"
+                            href="contact-us.html"
+                            >Contact Us</a
+                        >
+                        <a class="footer__link text-white" href="#."
+                            >Collaborate</a
+                        >
+
+                        <a class="footer__link text-white" href="#.">Privacy</a>
+                    </div>
+                    <div class="flex flex-col center-xy even-spacing-xs">
+                        <p class="text-white">
+                            Designed & built by
+                            <a class="dev__link text-white" href="#."
+                                >ChrisR.dev</a
+                            >
+                        </p>
+                        <p class="footer__paragraph text-white">
+                            Korean Kitchen &copyCopyright 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

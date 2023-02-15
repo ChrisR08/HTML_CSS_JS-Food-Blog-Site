@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/recipes.css" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../images/icons-logos/kk-favicon.png"
+        />
+        <script type="text/javascript" src="../js/index.js" defer></script>
+        <script type="text/javascript" src="../js/recipes.js" defer></script>
+
+        <title>Korean Kitchen - Bibimbap</title>
+    </head>
+
+    <body id="bibimbap" class="recipe-page-body">
+        <a class="skip-to-content" href="#main">Skip to content</a>
+
+        <!-- Top level header with nested logo & main-nav -->
+        <header id="header__main" class="header flex center-xy">
+            <div class="header__wrapper site-container flex">
+                <a class="header__logo" href="../index.html">
+                    <p class="header__logo fs-500 clr-dark ff-serif">
+                        <span class="text-red">K</span>orean
+                        <span class="text-blue">K</span>itchen
+                    </p>
+                </a>
+
+                <button
+                    id="mob-menu-btn"
+                    class="mobile-nav-toggle"
+                    aria-controls="primary-navigation"
+                    aria-label="Open menu button"
+                ></button>
+
+                <!-- Main Nav element -->
+                <div
+                    id="primary-nav-wrapper"
+                    data-menu-open="false"
+                    class="nav-wrapper"
+                >
+                    <nav class="header__main-nav flex center-xy">
+                        <ul
+                            id="primary-navigation"
+                            class="header__main-nav-ul flex flex-col"
+                        >
+                            <li class="nav-link">
+                                <a href="../index.html#recipes">Recipes</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="../index.html#categories"
+                                    >Categories</a
+                                >
+                            </li>
+                            <li class="nav-link">
+                                <a href="../my-account.html">My Account</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="../contact-us.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Start of the Main content -->
+        <main id="main" class="site-container">
+            <!-- Hero Section -->
+            <header id="recipe-hero" class="recipe-hero">
+                <div
+                    class="recipe-hero__title-container flex flex-col center-xy even-spacing-m"
+                >
+                    <p class="hero__lede center-text text-dark">
+                        02 February 2023 ||
+                        <a href="../index.html#categories">Rice Dishes</a>
+                    </p>
+                    <h1 class="h1 hero__h1 center-text fs-700 text-dark">
+                        Bibimbap
+                    </h1>
+                    <div class="save-share-wrapper flex">
+                        <div class="recipe-icon-wrapper flex center-xy">
+                            <img
+                                class="recipe-icon recipe-icon-save"
+                                src="../images/icons-logos/save-icon.svg"
+                            />
+                            <p id="saves-count">754</p>
+                        </div>
+                        <div class="recipe-icon-wrapper flex center-xy">
+                            <img
+                                class="recipe-icon recipe-icon-like"
+                                src="../images/icons-logos/heart-icon.svg"
+                            />
+                            <p id="likes-count">1045</p>
+                        </div>
+                        <div class="recipe-icon-wrapper flex center-xy">
+                            <img
+                                class="recipe-icon recipe-icon-comment"
+                                src="../images/icons-logos/speech-bubble.svg"
+                            />
+                            <p id="comments-count">1</p>
+                        </div>
+                    </div>
+                </div>
+                <picture class="img-container img-container-recipe-hero">
+                    <source
+                        id="recipe-img-jpg"
+                        srcset="../images/bibimbap-recipe.jpg"
+                    />
+                    <img
+                        id="recipe-img-webp"
+                        class="cover-img"
+                        loading="lazy"
+                        src="../images/bibimbap-recipe.webp"
+                        alt="A bowl of bibimbap, a korean rice, meat and veg dish."
+                    />
+                </picture>
+                <div class="recipe-hero__meta"></div>
+            </header>
+            <!-- Recipe Section -->
+            <div class="content">
+                <section class="section recipe-section">
+                    <div class="even-spacing-xl">
+                        <div class="recipe-intro even-spacing-m">
+                            <!-- I have decided to use buttons instead of a form as it seems to make more sense in this context -->
+                            <div class="save-share-wrapper flex">
+                                <button
+                                    id="save"
+                                    type="button"
+                                    class="save-recipe flex center-xy"
+                                >
+                                    <img
+                                        class="recipe-icon recipe-icon-save"
+                                        src="../images/icons-logos/save-icon.svg"
+                                    />
+                                    <p id="save">Save</p>
+                                </button>
+                                <button
+                                    id="like"
+                                    type="button"
+                                    class="recipe-icon-wrapper flex center-xy"
+                                >
+                                    <img
+                                        class="recipe-icon recipe-icon-like"
+                                        src="../images/icons-logos/heart-icon.svg"
+                                    />
+                                    <p id="save">Like</p>
+                                </button>
+                            </div>
+                            <h2 id="h2" class="h2">
+                                Bibimbap - A classic Korean rice, meat and
+                                vegetable dish
+                            </h2>
+                            <p id="short-desc">
+                                Bibimbap, which means "mixed rice" in Korean, is
+                                a popular Korean dish that's perfect for a quick
+                                and easy weeknight meal or a colorful and
+                                flavorful dinner party centerpiece.
+                            </p>
+                            <p>
+                                This traditional dish features a bed of rice
+                                topped with an array of colorful and nutritious
+                                ingredients, such as marinated beef, sautéed
+                                vegetables, and a fried egg, all served with a
+                                spicy gochujang sauce.
+                            </p>
+                        </div>
+                        <div
+                            class="recipe__ingredients-wrapper even-spacing-xs"
+                        >
+                            <h3 class="h3">Ingredients</h3>
+                            <ul class="ingredients-ul even-spacing-xs">
+                                <li>2 cups cooked short-grain rice</li>
+                                <li>2 carrots, julienned</li>
+                                <li>2 courgettes, julienned</li>
+                                <li>2 cups bean sprouts</li>
+                                <li>
+                                    8 oz. beef sirloin, sliced into thin strips
+                                </li>
+                                <li>2 tbsp. vegetable oil</li>
+                                <li>4 eggs</li>
+                                <li>4 tsp. gochujang (Korean chili paste)</li>
+                                <li>4 tsp. sesame oil</li>
+                                <li>4 tsp. soy sauce</li>
+                                <li>
+                                    Sesame seeds and sliced green onions, for
+                                    garnish
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="recipe-__instructions-wrapper even-spacing-xs"
+                        >
+                            <h3 class="h3">Instructions</h3>
+                            <ol class="ingredients-ol even-spacing-s">
+                                <li>
+                                    Cook the short-grain rice according to the
+                                    package instructions.
+                                </li>
+                                <li>
+                                    In a pan, sauté the carrots and zucchinis
+                                    until tender.
+                                </li>
+                                <li>
+                                    Blanch the bean sprouts in boiling water for
+                                    1-2 minutes, then drain.
+                                </li>
+                                <li>
+                                    In a separate pan, stir-fry the beef until
+                                    browned and cooked through.
+                                </li>
+                                <li>
+                                    In a small bowl, mix together the gochujang,
+                                    sesame oil, and soy sauce.
+                                </li>
+                                <li>Divide the cooked rice among 4 bowls.</li>
+                                <li>
+                                    Arrange the sautéed vegetables, blanched
+                                    bean sprouts, and stir-fried beef on top of
+                                    the rice.
+                                </li>
+                                <li>
+                                    Fry the eggs sunny-side up and place one on
+                                    top of each bowl.
+                                </li>
+                                <li>Drizzle the sauce over each bowl.</li>
+                                <li>
+                                    Garnish with sesame seeds and sliced green
+                                    onions.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <!-- Comments Section -->
+                <section class="section comments-section even-spacing-xl">
+                    <!-- Comments Form-->
+                    <div class="comments-container even-spacing-m">
+                        <h2>Comments</h2>
+                        <div class="ul-wrapper">
+                            <ul id="comments-ul" class="even-spacing-m">
+                                <li class="even-spacing-xs comments-wrapper">
+                                    <h4 id="comment-name" class="comment-name">
+                                        Gary McDuckface
+                                    </h4>
+                                    <p id="comment-date" class="comments__date">
+                                        12/02/2023
+                                    </p>
+                                    <p id="comment" class="comment">
+                                        Wow... I love this recipe!
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="even-spacing-m">
+                        <h3>Leave a Comment</h3>
+                        <form class="even-spacing-s">
+                            <div>
+                                <label for="form-comment-name">Name:</label
+                                ><br />
+                                <input
+                                    class="border-radius-s"
+                                    type="text"
+                                    id="form-comment-name"
+                                    name="comment-name"
+                                />
+                            </div>
+                            <div>
+                                <label for="Comment">Comment:</label><br />
+                                <textarea
+                                    id="form-comment"
+                                    class="border-radius-s"
+                                    name="form-comment"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+                            <input
+                                id="comment-submit-btn"
+                                class="submit-btn border-radius-s"
+                                type="submit"
+                                value="Submit"
+                            />
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- You may also like section -->
+        <aside id="other-recipes" class="section bg-white">
+            <div
+                class="other-recipes-content-wrapper site-container even-spacing-l"
+            >
+                <h2 class="h2">You May Also Like</h2>
+
+                <ul class="grid grid-you-may-also">
+                    <li class="recipe-card flex flex-col even-spacing-m">
+                        <div class="recipe-card__content even-spacing-s">
+                            <a
+                                class="clickable-parent"
+                                href="../recipes/korean-fried-chicken.html"
+                                ><h3 class="h3 text-dark">
+                                    Korean Fried Chicken
+                                </h3></a
+                            >
+                            <p class="recipe-card__excerpt">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Reiciendis eum, veniam eaque
+                                quas officiis sint ut deleniti accusamus quo
+                                consectetur sapiente.
+                            </p>
+                            <p class="recipe-card__read-more text-blue">
+                                Read More
+                            </p>
+                        </div>
+                        <picture class="recipe-card__img-container">
+                            <source srcset="../images/kfc-recipe.jpg" />
+                            <img
+                                class="section-cat__img cover-img"
+                                loading="lazy"
+                                src="../images/kfc-recipe.webp"
+                                alt="Spicy Korean Fried Chicken on a plate"
+                            />
+                        </picture>
+                    </li>
+                    <li class="recipe-card flex flex-col even-spacing-m">
+                        <div class="recipe-card__content even-spacing-s">
+                            <a
+                                class="clickable-parent"
+                                href="../recipes/kimbap.html"
+                                ><h3 class="h3 text-dark">Kimbap</h3></a
+                            >
+                            <p class="recipe-card__excerpt">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Reiciendis eum, veniam eaque
+                                quas officiis sint ut deleniti accusamus quo
+                                consectetur sapiente.
+                            </p>
+                            <p class="recipe-card__read-more text-blue">
+                                Read More
+                            </p>
+                        </div>
+                        <picture class="recipe-card__img-container">
+                            <source srcset="../images/kimbap-recipe.jpg" />
+                            <img
+                                class="section-cat__img cover-img"
+                                loading="lazy"
+                                src="../images/kimbap-recipe.webp"
+                                alt="A selection of Korean snacks."
+                            />
+                        </picture>
+                    </li>
+                    <li class="recipe-card flex flex-col even-spacing-m">
+                        <div class="recipe-card__content even-spacing-s">
+                            <a class="clickable-parent" href="#."
+                                ><h3 class="h3 text-dark">Hangover Soup</h3></a
+                            >
+                            <p class="recipe-card__excerpt">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Reiciendis eum, veniam eaque
+                                quas officiis sint ut deleniti accusamus quo
+                                consectetur sapiente.
+                            </p>
+                            <p class="recipe-card__read-more text-blue">
+                                Read More
+                            </p>
+                        </div>
+                        <picture class="recipe-card__img-container">
+                            <source
+                                srcset="../images/hangover-soup-recipe.jpg"
+                            />
+                            <img
+                                class="section-cat__img cover-img"
+                                loading="lazy"
+                                src="../images/hangover-soup-recipe.webp"
+                                alt="A selection of Korean snacks."
+                            />
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- Footer -->
+        <footer class="footer bg-dark">
+            <div class="footer__content-wrapper flex flex-col">
+                <ul class="grid grid-instagram">
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="../images/rice-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="../images/rice-cat.webp"
+                                alt="A bowl of Korean rice and pork"
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="../images/noodles-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="../images/noodles-cat.webp"
+                                alt="A bowl of Korean noodles."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="../images/korean-bbq-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="../images/korean-bbq-cat.webp"
+                                alt="Chopsticks holding meat over a Korean BBQ."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="../images/soup-broth-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="../images/soup-broth-cat.webp"
+                                alt="A bowl of Korean kimchi soup"
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="../images/side-dishes-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="../images/side-dishes-cat.webp"
+                                alt="A selection of Korean side-dishes."
+                            />
+                        </picture>
+                    </li>
+                    <li class="grid-instagram__child">
+                        <picture class="grid-instagram__img-container">
+                            <source srcset="../images/kimbap-cat.jpg" />
+                            <img
+                                class="cover-img"
+                                loading="lazy"
+                                src="../images/kimbap-cat.webp"
+                                alt="A selection of Korean snacks."
+                            />
+                        </picture>
+                    </li>
+                    <li class="insta-follow-btn-wrapper">
+                        <div class="insta-follow-btn flex center-xy">
+                            <a
+                                href="#."
+                                class="insta-follow-btn__link center-text clickable-parent text-dark"
+                                >Follow us on Instagram</a
+                            >
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="footer__content site-container even-spacing-m">
+                    <div class="footer__link-wrapper flex flex-row center-xy">
+                        <a
+                            class="footer__link text-white"
+                            href="../contact-us.html"
+                            >Contact Us</a
+                        >
+                        <a class="footer__link text-white" href="#."
+                            >Collaborate</a
+                        >
+
+                        <a class="footer__link text-white" href="#.">Privacy</a>
+                    </div>
+                    <div class="flex flex-col center-xy even-spacing-xs">
+                        <p class="text-white">
+                            Designed & built by
+                            <a class="dev__link text-white" href="#."
+                                >ChrisR.dev</a
+                            >
+                        </p>
+                        <p class="footer__paragraph text-white">
+                            Korean Kitchen &copyCopyright 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

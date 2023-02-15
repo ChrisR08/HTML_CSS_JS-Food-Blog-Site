@@ -1,0 +1,1060 @@
+/* Custom Properties ============================================================================ */
+
+:root {
+    /* Color Variables */
+    --clr-dark: hsl(194, 75%, 16%);
+    --clr-blue: hsl(213, 100%, 31%);
+    --clr-red: hsl(355, 63%, 49%);
+    --clr-yellow: hsl(42, 80%, 57%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(196, 65%, 97%);
+
+    /* Font-families */
+    --ff-serif: "Noto Serif KR", serif;
+    --ff-sans-serif: "Nanum Gothic", sans-serif;
+
+    /* Font Sizes */
+    /* Rem sizing 1 = 10px */
+    font-size: 62.5%;
+    --fs-700: clamp(3.2rem, calc(3.2rem + ((1vw - 0.32rem) * 1.8182)), 5.8rem);
+    --fs-600: clamp(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.3)), 3.2rem);
+    --fs-500: clamp(2.2rem, calc(2.2rem + ((1vw - 0.32rem) * 0.7)), 2.6rem);
+    --fs-400: clamp(1.6rem, calc(1.6rem + ((1vw - 0.32rem) * 0.3)), 1.7rem);
+
+    /* Gap */
+    --gap-xs: 0.75rem;
+    --gap-s: 1.75rem;
+    --gap-m: 3rem;
+    --gap-l: 4rem;
+    --gap-xl: 8rem;
+    --gap-xxl: 16rem;
+
+    /* Padding */
+    --pad-xs: 0.25em;
+    --pad-s: 0.5em;
+    --pad-m: 1em;
+    --pad-l: 2em;
+    --pad-xl: 4em;
+    --pad-xxl: 8em;
+}
+
+/* CSS Reset ==================================================================================== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ol,
+ul,
+li,
+figure,
+picture {
+    margin: 0;
+}
+
+ol,
+ul,
+li {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    font-family: var(--ff-serif);
+}
+
+.h3,
+.h4,
+.h5 {
+    font-weight: 600;
+}
+
+/* Remove list styles on ul, ol elements with a list role,
+default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Reset default button styles */
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/* Set core root defaults */
+html,
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    font-family: var(--ff-sans-serif);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    color: var(--clr-dark);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    border-top: 8.5rem solid var(--clr-white);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: flex;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and 
+smooth scroll for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Targets all links & paragraphs */
+p {
+    color: var(--clr-dark);
+    text-align: left;
+}
+
+a {
+    font-weight: 400;
+    color: var(--clr-blue);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Targets all links: hover color */
+a:hover,
+a:focus {
+    color: var(--clr-yellow);
+}
+
+/* Utility Classes ============================================================================== */
+
+/* Layout */
+
+.site-container {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+@media (min-width: 700px) {
+    .site-container {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .site-container {
+        max-width: 128rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.section {
+    padding: var(--pad-xl) 0;
+}
+
+/* Flexbox */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.center-xy {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+/* Even spacing in a container */
+.even-spacing-xs > *:where(:not(:first-child)) {
+    margin-top: var(--gap-xs);
+}
+
+.even-spacing-s > *:where(:not(:first-child)) {
+    margin-top: var(--gap-s);
+}
+
+.even-spacing-m > *:where(:not(:first-child)) {
+    margin-top: var(--gap-m);
+}
+
+.even-spacing-l > *:where(:not(:first-child)) {
+    margin-top: var(--gap-l);
+}
+
+.even-spacing-xl > *:where(:not(:first-child)) {
+    margin-top: var(--gap-xl);
+}
+
+/* Extends the clickable area of a link to its relative parent */
+.clickable-parent:after {
+    content: " ";
+    position: absolute;
+    inset: 0 0 0 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Screen Readers Only - Improves accessibility, used to add context */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skips to main content for keyboard nav */
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: var(--clr-white);
+    color: var(--clr-dark);
+    padding: 0.5em 1em;
+    margin-inline: auto;
+    transform: translateY(-300%);
+    transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
+
+.border-radius-s {
+    border-radius: 6px;
+}
+
+/* Colors */
+
+.bg-dark {
+    background-color: var(--clr-dark);
+}
+
+.bg-blue {
+    background-color: var(--clr-blue);
+}
+
+.bg-red {
+    background-color: var(--clr-red);
+}
+
+.bg-yellow {
+    background-color: var(--clr-yellow);
+}
+
+.bg-white {
+    background-color: var(--clr-white);
+}
+
+.bg-off-white {
+    background-color: var(--clr-off-white);
+}
+.text-dark {
+    color: var(--clr-dark);
+}
+
+.text-red {
+    color: var(--clr-red);
+}
+
+.text-blue {
+    color: var(--clr-blue);
+}
+
+.text-white {
+    color: var(--clr-white);
+}
+
+.text-yellow {
+    color: var(--clr-yellow);
+}
+/* Typography */
+.h1 {
+    line-height: 1.35;
+}
+
+.h2 {
+    font-size: var(--fs-600);
+    color: var(--clr-red);
+}
+
+.ff-serif {
+    font-family: var(--ff-serif);
+}
+
+.ff-sans-serif {
+    font-family: var(--ff-sans-serif);
+}
+
+.letter-spacing-s {
+    letter-spacing: 2px;
+}
+
+.letter-spacing-m {
+    letter-spacing: 2.5px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-400 {
+    line-height: 1.6;
+}
+
+/* Header ===================================================================*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-white);
+    border-bottom: 1px solid var(--clr-off-white);
+    min-height: 8.5rem;
+    padding: 2rem 0;
+    z-index: 9999;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.header__wrapper {
+    position: relative;
+    align-items: center;
+}
+
+/* For the sticky on scroll up effect */
+.header.is-hidden {
+    transform: translateY(-100%);
+}
+.header.is-sticky {
+    transition-delay: 0.5s;
+    transform: translateY(0);
+}
+
+.header__logo {
+    text-decoration: none;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+    color: var(--clr-blue);
+    text-decoration: none;
+}
+
+/* JS controls the mobile menu positioning */
+.nav-wrapper[data-menu-open="true"] {
+    transform: translateX(0);
+}
+
+.mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    z-index: 9999;
+    right: 2rem;
+    top: 0.65rem;
+    background: transparent;
+    border: 0;
+    background-image: url(../images/icons-logos/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Using JS controls the mobile menu positioning */
+.mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(../images/icons-logos/close-icon.svg);
+}
+
+/* Accessibility - Adds focus outline */
+.mobile-nav-toggle:focus-visible {
+    outline: 2px solid var(--clr-dark);
+    outline-offset: 0.5rem;
+}
+
+.header__main-nav {
+    margin: auto;
+}
+
+.header__main-nav-ul {
+    margin: 0;
+}
+
+.nav-link > a {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+.nav-link {
+    margin: 0 1rem;
+    padding: 2rem 2rem;
+}
+
+/* Targets the bullet of the li */
+nav > ul {
+    list-style: none;
+}
+
+/* Hero Section ============================================================ */
+.hero__grid {
+    display: grid;
+    grid-template-areas: "hero";
+    min-height: calc(100vh - 7.2rem);
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    grid-area: hero;
+}
+
+.hero__img {
+    grid-area: hero;
+}
+
+.img-overlay {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.5),
+        rgba(44, 44, 44, 0.4)
+    );
+    grid-area: hero;
+    z-index: 2;
+}
+
+.hero__content-container {
+    width: 100%;
+    max-width: 134rem;
+    padding: 2rem;
+    margin: auto;
+    justify-content: flex-start;
+    grid-area: hero;
+    z-index: 5;
+}
+
+.hero__h1 {
+    max-width: 100%;
+}
+
+.hero__lede {
+    max-width: 90%;
+}
+
+/* Categories Section ======================================================*/
+.section-cat__grid {
+    max-width: 100%;
+    overflow: hidden;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: var(--gap-s);
+    padding: 3rem 0;
+}
+
+.section-cat__grid-child {
+    position: relative;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.section-cat__img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 /1;
+    border-radius: 50% 50% 50% 50%;
+    margin-bottom: 1rem;
+}
+
+.section-cat__img {
+    transform: scale(1.08);
+}
+
+.cat-img-1 {
+    transform: scale(1.3) translateX(-0.6rem);
+}
+
+.cat-img-2 {
+    transform: scale(1.35) translateX(-0.2rem);
+}
+
+.cat-img-3 {
+    transform: scale(1.172) translateX(0.2rem) translateY(0.5rem);
+}
+
+/* Bio Section ======================================================*/
+.bio-content-wrapper {
+    padding: var(--pad-xl) 3rem;
+}
+
+.section-bio__img-container {
+    width: 60%;
+    height: 60%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.content__span {
+    display: block;
+    font-weight: 400;
+}
+
+.author {
+    font-weight: 700;
+}
+
+.content__p {
+    max-width: 94%;
+}
+
+.social-links {
+    width: 50%;
+    justify-content: space-between;
+}
+
+/* Recipes Section ======================================================*/
+.recipes-content-wrapper {
+    padding: var(--pad-xl) 3rem;
+}
+
+.grid-recipes {
+    grid-gap: var(--gap-xl);
+}
+
+.recipe-card {
+    position: relative;
+}
+
+.recipe-card__content {
+    margin-top: 1.5rem;
+}
+
+.recipe-card__img-container {
+    overflow: hidden;
+    width: 100%;
+    height: 40rem;
+    order: -1;
+}
+
+.recipe-card__read-more {
+    font-weight: 600;
+}
+
+/* Footer ===========================================================*/
+.footer {
+    min-height: 55vh;
+}
+
+.footer__content-wrapper {
+    min-height: 55vh;
+}
+
+.grid-instagram {
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 0.5rem;
+}
+
+.grid-instagram__child {
+    aspect-ratio: 1 / 1;
+}
+
+.grid-instagram__img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.insta-follow-btn-wrapper {
+    position: absolute;
+    inset: 0 0 0 0;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    z-index: 999;
+}
+
+.insta-follow-btn {
+    background-color: hsl(189, 41%, 97%, 0.85);
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1 /1;
+}
+
+.insta-follow-btn:hover,
+.insta-follow-btn:focus {
+    background-color: var(--clr-off-white);
+}
+
+.insta-follow-btn__link {
+    font-size: 1.4rem;
+    max-width: 10ch;
+}
+
+.footer__link-wrapper {
+    justify-content: space-between;
+}
+
+.footer__link {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.footer__link:not(:last-of-type) {
+    margin-right: 2rem;
+}
+.footer__content {
+    margin: auto;
+}
+
+/* Back-to-top Button ======================================================*/
+.back-to-top {
+    display: none;
+}
+
+/* 
+
+
+
+
+
+
+ */
+/* Media Quries ========================================================== */
+@media (max-width: 1024px) {
+    .header {
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .nav-wrapper {
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: 99999;
+        min-height: 100vh;
+        min-height: 100dvh;
+        background-color: var(--clr-dark);
+        margin-top: 8.5rem;
+        padding: 3.75rem 3rem;
+        transform: translateX(100%);
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+@media (min-width: 700px) {
+    .section {
+        padding: 8rem 0;
+    }
+    .nav-wrapper {
+        inset: 0 0 0 50%;
+        margin-top: 8.5rem;
+    }
+
+    .mobile-nav-toggle {
+        top: 1rem;
+        right: 3rem;
+    }
+
+    /* Hero Section ====================================================== */
+    .hero__grid {
+        min-height: 50vh;
+    }
+
+    .hero__content-container {
+        width: 100%;
+        max-width: 134rem;
+        padding: 3rem;
+    }
+
+    .hero__h1 {
+        max-width: 60%;
+    }
+
+    .hero__lede {
+        max-width: 70%;
+    }
+
+    /* Categories Section =============================================== */
+    .section-cat__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: var(--gap-s);
+        padding: 3rem 0;
+    }
+
+    .section-cat__grid-child {
+        position: relative;
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    /* Bio Section ======================================================*/
+    .section-bio__img-container {
+        width: 50%;
+        height: 50%;
+    }
+
+    .content__p {
+        max-width: 70%;
+    }
+
+    .social-links {
+        width: 40%;
+    }
+
+    /* Recipes Section =============================================== */
+    .recipe-card__img-container {
+        height: 50rem;
+    }
+
+    /* Footer ===========================================================*/
+    .footer {
+        min-height: 70vh;
+    }
+
+    .footer__content-wrapper {
+        min-height: 70vh;
+    }
+
+    .insta-follow-btn-wrapper {
+        position: absolute;
+        inset: 0 0 0 0;
+        background: transparent;
+        display: grid;
+        place-items: center;
+        z-index: 999;
+    }
+
+    .insta-follow-btn {
+        background-color: hsl(189, 41%, 97%, 0.85);
+        position: relative;
+        overflow: hidden;
+        padding: 2rem;
+        border-radius: 50%;
+        aspect-ratio: 1 /1;
+    }
+
+    .insta-follow-btn:hover,
+    .insta-follow-btn:focus {
+        background-color: var(--clr-off-white);
+    }
+
+    .insta-follow-btn__link {
+        font-size: 2rem;
+        max-width: 10ch;
+    }
+
+    .footer__link-wrapper {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .footer__link {
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .footer__link:not(:last-of-type) {
+        margin-right: 2rem;
+    }
+
+    .footer__content {
+        margin: auto;
+    }
+}
+
+/* Small Laptop and Above ==================================================*/
+
+@media (min-width: 1025px) {
+    .section {
+        padding: 8rem 3rem;
+    }
+
+    /* Global header =======================================================*/
+
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    .header__logo {
+        margin: 0;
+    }
+
+    .header {
+        padding: 0.5rem 3rem;
+    }
+
+    .header__wrapper {
+        width: 100%;
+        height: auto;
+        max-width: 128rem;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-wrapper {
+        position: static;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        transform: translateX(0);
+    }
+
+    .header__main-nav-ul > .nav-link:last-of-type {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .header__main-nav-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-link > a {
+        color: var(--clr-blue);
+        text-decoration: none;
+    }
+
+    .nav-link > a:hover,
+    .nav-link > a:focus {
+        color: var(--clr-yellow);
+    }
+
+    /* Hero Section ======================================================== */
+    .hero__content-container {
+        padding: 3rem;
+    }
+
+    .hero__h1 {
+        max-width: 55%;
+    }
+
+    .hero__lede {
+        max-width: 45%;
+    }
+
+    .img-overlay {
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 44, 44, 0.2),
+            rgba(85, 85, 85, 0.15),
+            rgba(175, 175, 175, 0.1)
+        );
+    }
+
+    /* Categories Section ================================================= */
+    .section-cat {
+        padding: 5rem 3rem;
+    }
+    .section-cat__grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-gap: var(--gap-m);
+    }
+
+    /* Grid - Main Layout ==================================================*/
+    .grid-main {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        max-width: 134rem;
+        margin: 0 auto;
+        padding: 0 3rem;
+    }
+    .section-bio {
+        grid-column: 10 / -1;
+        grid-row: 1;
+    }
+    .section-recipes {
+        grid-column: 1 / 10;
+        grid-row: 1;
+    }
+
+    /* Bio Section =========================================================*/
+    .section-bio {
+        height: 100%;
+    }
+
+    .bio-content-wrapper {
+        position: sticky;
+        top: 0;
+        padding: var(--pad-xl) 0rem;
+    }
+
+    .section-bio__img-container {
+        width: 40%;
+        height: 40%;
+        margin: 1.25rem 0 -2.25rem 0;
+    }
+
+    .content__p {
+        max-width: 70%;
+    }
+
+    .social-links {
+        width: 50%;
+    }
+
+    .social-link {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    /* Recipes Section =================================================== */
+    .recipes-content-wrapper {
+        padding: var(--pad-xl) 0rem;
+    }
+
+    .grid-recipes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: var(--gap-m);
+        grid-row-gap: var(--gap-xl);
+    }
+    /* Footer =============================================================*/
+    .footer {
+        min-height: 32vh;
+        padding-bottom: 3rem;
+    }
+
+    .footer__content-wrapper {
+        min-height: 32vh;
+    }
+
+    .grid-instagram {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .insta-follow-btn {
+        background-color: hsl(189, 41%, 97%, 0.85);
+        position: relative;
+        overflow: hidden;
+        padding: 1.65rem;
+        border-radius: 50%;
+        aspect-ratio: 1 /1;
+    }
+
+    .insta-follow-btn__link {
+        font-size: 1.4rem;
+    }
+
+    .insta-follow-btn__link:hover {
+        color: var(--clr-dark);
+    }
+
+    .footer__link-wrapper {
+        max-width: 50%;
+    }
+
+    .footer__link {
+        margin: 3rem 0 0 0;
+    }
+}
