@@ -38,7 +38,7 @@ To view the project, you can open the files in an editor such as VS Code and use
 
 ![Step 1: Clone the repository to your local machine](/images/step-1.png)
 
-2. Open the project folder in your code editor of choice. We recommend using Visual Studio Code.
+2. Open the project folder in your code editor of choice. I recommend using Visual Studio Code.
 
 ![Step 2: Open the project folder in your code editor of choice](/images/step-2.png)
 
@@ -46,6 +46,6 @@ To view the project, you can open the files in an editor such as VS Code and use
 
 ![Step 3: Install the Live Server extension in Visual Studio Code and launch the project](/images/step-3.png)
 
-That's it! You should now be able to view the project in your web browser by navigating to `http://localhost:5500` in your preferred browser.
+That's it... You should now be able to view the project in your web browse!
 
 
