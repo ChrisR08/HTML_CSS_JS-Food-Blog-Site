@@ -163,71 +163,63 @@ function updateSaveCount() {
 
 //
 function storeSavedRecipe(e) {
-    // Get the saved recipes from local storage
+    // Define base path (adjust if you deploy somewhere else later)
+    const basePath = "/Korean-Kitchen-HTML-CSS-JS/";
+
+    // Get saved recipes from local storage
     let savedRecipes = localStorage.getItem("savedRecipes");
+    savedRecipes = savedRecipes ? JSON.parse(savedRecipes) : [];
 
-    if (savedRecipes) {
-        savedRecipes = JSON.parse(savedRecipes);
-    } else {
-        savedRecipes = [];
-    }
-    console.log(savedRecipes);
-    // Get the elements from the page we want to store
-    // Regex & .trim() removes whitespace and unwanted characters
-    let title = document.getElementById("h2").textContent;
+    // Get title and clean it
+    let title = document
+        .getElementById("h2")
+        .textContent.trim()
+        .replace(/\s+/g, " ");
 
-    title = title.replace(/\s+/g, " ");
+    // Get and fix image paths
+    let jpgSrc = document.querySelector("source").getAttribute("srcset") || "";
+    let webpSrc = document.querySelector("img").getAttribute("src") || "";
 
-    let jpgSrc = document
-        .getElementById("recipe-img-jpg")
-        .getAttribute("srcset");
-    jpgSrc = jpgSrc.replace(/\s+/g, " ");
+    // Force correct root-relative paths for your environment
+    jpgSrc = `${basePath}${jpgSrc.replace(/^(\.\.\/)+/, "")}`.trim();
+    webpSrc = `${basePath}${webpSrc.replace(/^(\.\.\/)+/, "")}`.trim();
 
-    let shortDesc = document.getElementById("short-desc");
-    shortDesc = shortDesc.innerText.replace(/\s+/g, " ");
+    // Clean description
+    let shortDesc = document
+        .getElementById("short-desc")
+        .innerText.trim()
+        .replace(/\s+/g, " ");
 
+    // Get current page URL relative to base
     let recipeUrl = e.srcElement.baseURI;
-    const trimmedUrl = `../${recipeUrl.substring(
-        recipeUrl.indexOf("/recipes/")
-    )}`;
+    let recipePath = recipeUrl.split(window.location.origin)[1]; // e.g. /Korean-Kitchen-HTML-CSS-JS/recipes/bibimbap.html
 
-    // Check if the recipe already exists in the savedRecipes array
-    let recipeExists = savedRecipes.find(
-        (recipe) => recipe.imageUrlJpg === jpgSrc
-    );
-
-    // If Recipe is already saved, show an alert
+    // Check if already saved
+    let recipeExists = savedRecipes.find((recipe) => recipe.url === recipePath);
     if (recipeExists) {
         alert("This recipe is already saved!");
         return;
     }
 
-    // Calls the fucntion, will only execute if recipe does not exist
+    // Update visual counter (assumes this function exists)
     updateSaveCount();
 
-    // Add the recipe to the saved recipes array
+    // Build recipe object
     let recipeData = {
-        title: title.trim(),
-        imageUrlJpg: jpgSrc.trim(),
-        imageUrlWebP: document
-            .getElementById("recipe-img-webp")
-            .getAttribute("src"),
-        description: shortDesc.trim(),
-        url: trimmedUrl,
+        title: title,
+        imageUrlJpg: jpgSrc,
+        imageUrlWebP: webpSrc,
+        description: shortDesc,
+        url: recipePath,
     };
 
-    // Adds the recipe to the array of saved recipes
+    // Save and store
     savedRecipes.push(recipeData);
-
-    // Store the updated saved recipes in local storage
     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
 
-    // Show the number of saved recipes in an alert
+    // Alert user
     let numSaved = savedRecipes.length;
-    let recipes = "recipes";
-    if (numSaved === 1) {
-        recipes = "recipe";
-    }
+    let recipes = numSaved === 1 ? "recipe" : "recipes";
     alert(`Congratulations!\nYou have ${numSaved} ${recipes} saved for later.`);
 }
 
