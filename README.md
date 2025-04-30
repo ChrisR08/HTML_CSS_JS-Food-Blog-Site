@@ -1,4 +1,4 @@
-Build a complete website with Vanilla HTML, CSS & Javascript.
+Build a complete website with Vanilla HTML, CSS & JavaScript.
 
 
 ## Overview
@@ -28,8 +28,8 @@ This project is a full website design and build that utilises HTML, CSS & JS. Th
 - JavaScript
 
 
-## Accessibility and SEO/Optimization
-This project has been designed with accessibility and SEO/optimization in mind. The website is designed to be responsive and accessible on a wide range of devices, and has been built with clean, semantic HTML and well-structured CSS to ensure that it is easy to read and navigate. The website also follows best practices for SEO, including the use of appropriate meta tags, alt attributes on images, and descriptive page titles and headings.
+## Accessibility and SEO/Optimisation
+This project has been designed with accessibility and SEO/optimisation in mind. The website is designed to be responsive and accessible on a wide range of devices, and has been built with clean, semantic HTML and well-structured CSS to ensure that it is easy to read and navigate. The website also follows best practices for SEO, including the use of appropriate meta tags, alt attributes on images, and descriptive page titles and headings.
 
 
 ## Future Development
